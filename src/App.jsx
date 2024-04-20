@@ -10,7 +10,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/by-category/:categoryID" element={<PostByCategory />} />
-          <Route path="/details/:postID" element={<DetailsPage />} />
+          <Route path="/postDetails/:postID" element={<DetailsPage />} />
         </Routes>
       </BrowserRouter>
     </>

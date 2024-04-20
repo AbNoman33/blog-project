@@ -9,7 +9,7 @@ const BlogList = (props) => {
             return (
               <Link
                 key={index.toString()}
-                to={"/details/" + item["id"]}
+                to={"/postDetails/" + item["id"]}
                 className="card w-100 glass"
               >
                 <figure>

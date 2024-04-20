@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { postCategories } from "../ApiRequest/ApiRequest.js";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Layout = (props) => {
   const [categories, setCategories] = useState([]);
@@ -43,7 +43,7 @@ const Layout = (props) => {
               {categories.map((item, index) => {
                 return (
                   <li key={index.toString()}>
-                    <NavLink to={"/byCategory/" + item["id"]}>
+                    <NavLink to={"/by-category/" + item["id"]}>
                       {item["name"]}
                     </NavLink>
                   </li>
@@ -51,7 +51,9 @@ const Layout = (props) => {
               })}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">BLOG Site</a>
+          <Link to="/" className="btn btn-ghost normal-case text-xl">
+            BLOG Site
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -61,7 +63,7 @@ const Layout = (props) => {
             {categories.map((item, index) => {
               return (
                 <li key={index.toString()}>
-                  <NavLink to={"/byCategory/" + item["id"]}>
+                  <NavLink to={"/by-category/" + item["id"]}>
                     {item["name"]}
                   </NavLink>
                 </li>
